@@ -34,4 +34,10 @@ public interface EmployeeMapper {
      */
     Page<Employee> pageQuery(EmployeePageQueryDTO employeePageQueryDTO);
 
+    /**
+     * 启用或禁用员工账号
+     * @param status
+     * @param id
+     */
+    void update(Employee employee);
 }
