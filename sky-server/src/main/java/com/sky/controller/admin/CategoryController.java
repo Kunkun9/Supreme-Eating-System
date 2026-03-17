@@ -88,6 +88,17 @@ public class CategoryController {
         return Result.success();
     }
 
+    /**
+     * 根据类型查询分类
+     * @param type
+     * @return
+     */
+    @GetMapping("/list")
+    public Result<List<Category>> list(Integer type){
+        List<Category> list = categoryService.list(type);
+        return Result.success(list);
+    }
+
 
 
 
